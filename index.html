@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.jpeg">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
 </head>
 <body>
 <!-- start header -->
@@ -35,7 +36,7 @@
 
             <div class="swiper-slide"><a href="#"><img src="images/slide-1.jpg" alt=""></a></div>
             <div class="swiper-slide"><a href="#"><img src="images/slide-2.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/garena-shell.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/garena-shelll.jpg" alt=""></a></div>
         
         </div>
 
@@ -271,10 +272,38 @@
     </section>
 <!-- end section populer -->
 
+<!-- Input data -->
+<div id="tentang"></div>
+<section class="tentang">
+    <div class="card">
+        <h1>Masukkan Data Sesuai Pilihan</h1>
+        <br>
+        <p>
+            <!-- <div>
+                <label for="#id">ID : </label>
+                <input type="text" name="id" id="id">
+            </div> -->
+            <div>
+                <label for="#detail">Detail Data : </label>
+                <textarea style="margin-left: 9%;" id="data" name="data" rows="5" cols="40" 
+                placeholder="
+                Contoh 
+                Order : 5 Diamonds
+                Id&Server/Email : 8271881(8123)/users@gmail.com
+                Harga : Rp 822"></textarea>
+            </div>
+            <button type="submit" name="submit" id="submit" style="background-color: white; border-radius: 10px; padding: 5px; border: none;">Buat Data</button>
+            <div id="tempat" style="margin-top: 15px;">
+            </div>
+        </p>
+    </div>
+</section>
+<!-- Input data -->
+
 
 
 <!-- start tentang -->
-<div id="tentang"></div>
+<div id="tentang" style="margin-top: 100px;"></div>
 <section class="tentang">
     <div class="card">
         <h1>TENTANG KAMI</h1>
@@ -306,6 +335,15 @@
     &copy;2022 XYZESTORE All Right Reserved
 </div>
 
+<script>
+    document.getElementById("submit").addEventListener("click", tampilkan_href);
+    function tampilkan_href() {
+        const data = document.getElementById("data").value;
+        document.getElementById("tempat").innerHTML = '<a class="pesan" href="https://api.whatsapp.com/send?phone=85156825080&text='+data+'" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>';
+    }
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
